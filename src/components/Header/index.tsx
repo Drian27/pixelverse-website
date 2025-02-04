@@ -55,7 +55,7 @@ export default function Header() {
           {["Home", "About", "Pricing", "Contact"].map((item) => (
             <li key={item} className="group py-2 px-4">
               <Link
-                href={`/${item.toLowerCase()}`}
+                href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 className="text-[#9C9C9C] text-[18px] hover:text-white relative block"
               >
                 <span className="absolute right-0 -bottom-1 w-0 h-[2px] bg-[#605DFF] transition-all duration-300 group-hover:w-full"></span>
