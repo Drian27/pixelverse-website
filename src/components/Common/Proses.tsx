@@ -26,7 +26,7 @@ export default function Proses() {
         ))}
       </div>
       <div className="mt-6 flex space-x-4">
-        <button className="bg-white px-6 py-2 rounded-full font-semibold">Online</button>
+        <button className="bg-white text-black px-6 py-2 rounded-full font-semibold">Online</button>
       </div>
     </div>
   );
