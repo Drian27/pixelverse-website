@@ -22,8 +22,9 @@ export default function Index() {
             <span className="font-extrabold">Keep !!</span>
           </h1>
           <p className="text-lg sm:text-xl font-semibold">
-            makes everything easier in one system, <br />
-            wherever and whenever you can appear
+            make everything easier in one system, wherever and whenever you can{" "}
+            <br />
+            appear Capture your moments every moment
           </p>
 
           <button className="mt-6 px-6 py-3 bg-white text-black font-bold text-lg rounded-full shadow-lg hover:bg-gray-100 transition">

@@ -19,11 +19,6 @@ export default function TestimonySlider() {
     "/template-3.png",
     "/template-4.png",
     "/template-5.png",
-    "/template-6.png",
-    "/template-7.png",
-    "/template-8.png",
-    "/template-9.png",
-    "/template-10.png",
   ];
 
   const totalPages = Math.ceil(images.length / 5);
@@ -64,6 +59,8 @@ export default function TestimonySlider() {
                 <div className="border border-white p-2 bg-white rounded-lg shadow-lg">
                   <Image
                     src={img}
+                    width={300}
+                    height={400}
                     alt={`Template ${index + 1}`}
                     className="rounded-lg object-cover w-full h-64"
                   />
