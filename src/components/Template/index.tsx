@@ -12,6 +12,7 @@ import Image from "next/image";
 export default function TestimonySlider() {
   const swiperRef = useRef<SwiperInstance | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(0);
+  const [popupImage, setPopupImage] = useState<string | null>(null);
 
   const images = [
     "/template-1.png",
@@ -56,7 +57,10 @@ export default function TestimonySlider() {
           {images.map((img, index) => (
             <SwiperSlide key={index}>
               <div className="relative flex justify-center">
-                <div className="border border-white p-2 bg-white rounded-lg shadow-lg">
+                <div
+                  className="border border-white p-2 bg-white rounded-lg shadow-lg cursor-pointer"
+                  onClick={() => setPopupImage(img)}
+                >
                   <Image
                     src={img}
                     width={300}
@@ -115,6 +119,30 @@ export default function TestimonySlider() {
           </button>
         </li>
       </ul>
+
+      {/* Popup Image */}
+      {popupImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+          onClick={() => setPopupImage(null)}
+        >
+          <div className="relative p-4 bg-white rounded-lg shadow-lg max-w-64 w-full">
+            <button
+              className="absolute top-2 right-2 text-black text-2xl"
+              onClick={() => setPopupImage(null)}
+            >
+              &times;
+            </button>
+            <Image
+              src={popupImage}
+              width={200}
+              height={300}
+              alt="Popup Template"
+              className="rounded-lg object-cover w-full"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
