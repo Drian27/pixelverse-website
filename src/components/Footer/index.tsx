@@ -8,24 +8,27 @@ export default function Footer() {
       <div className="container mx-auto text-center lg:text-left">
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-6">
-          <a
+          <Link
             href="#"
+            passHref
             className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all"
           >
             <FaFacebookF size={18} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
+            passHref
             className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all"
           >
             <FaTwitter size={18} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="#"
+            passHref
             className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all"
           >
             <FaInstagram size={18} />
-          </a>
+          </Link>
         </div>
 
         {/* Footer Content */}
