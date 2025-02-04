@@ -6,16 +6,24 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-b bg-black text-white py-10 px-6">
       <div className="container mx-auto text-center lg:text-left">
-        
         {/* Social Media Icons */}
         <div className="flex justify-center space-x-6 mb-6">
-          <a href="#" className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all">
+          <a
+            href="#"
+            className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all"
+          >
             <FaFacebookF size={18} />
           </a>
-          <a href="#" className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all">
+          <a
+            href="#"
+            className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all"
+          >
             <FaTwitter size={18} />
           </a>
-          <a href="#" className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all">
+          <a
+            href="#"
+            className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all"
+          >
             <FaInstagram size={18} />
           </a>
         </div>
@@ -50,38 +58,30 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="hover:text-gray-300">
-                Hello
+                  📞 +62 896-3823-3061
                 </Link>
               </li>
               <li>
                 <Link href="/" className="hover:text-gray-300">
+                  info@pixelverse.id
                 </Link>
               </li>
               <li>
-                <Link href="/" className="hover:text-gray-300">
-                </Link>
+                <Link href="/" className="hover:text-gray-300"></Link>
               </li>
             </ul>
           </div>
 
-          {/* Meet Us Section */}
+          {/* Address Section */}
           <div>
-            <h4 className="font-semibold text-lg mb-3">Meet Us</h4>
+            <h4 className="font-semibold text-lg mb-3">Address</h4>
             <ul className="space-y-2">
-              <li>📞 +62 896-3823-3061</li>
-              <li>
-                📧{" "}
-                <a href="pixelverse.id" className="hover:text-gray-300">
-                  @pixelverse.id
-                </a>
-              </li>
               <li>
                 📍 Villa Bogor Indah 5, Cluster Pelikan Blok CE 11 No 16, Kota
                 Bogor, Jawa Barat 16161
               </li>
             </ul>
           </div>
-
         </div>
       </div>
     </footer>
