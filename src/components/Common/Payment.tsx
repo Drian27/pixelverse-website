@@ -4,7 +4,7 @@ import { QrCode, Wallet } from "lucide-react";
 
 export default function Payment() {
   return (
-    <section className="relative py-40 px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between bg-gradient-to-r bg-[#121629]">
+    <section className="relative py-40 px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between bg-gradient-to-r bg-black">
       <div className="max-w-lg text-center lg:text-left">
         <h2 className="text-5xl font-bold text-white leading-tight">
           Security, <span className="text-white">Simplicity,</span>

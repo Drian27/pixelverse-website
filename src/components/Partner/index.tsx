@@ -17,7 +17,7 @@ const scrollingBrands = [...brands, ...brands, ...brands];
 
 export default function Index() {
   return (
-    <div className="bg-[#121629] py-10 text-center overflow-hidden">
+    <div className="bg-black py-10 text-center overflow-hidden">
       <h2 className="text-xl md:text-2xl font-bold text-white">Our Partner</h2>
       <div className="relative mt-6 flex w-full overflow-hidden">
         <motion.div

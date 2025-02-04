@@ -31,7 +31,7 @@ export default function TestimonySlider() {
   };
 
   return (
-    <div className="bg-[#121629] py-16 text-white flex flex-col items-center">
+    <div className="bg-black py-16 text-white flex flex-col items-center">
       <h2 className="text-4xl font-bold mb-6">Available Templates</h2>
 
       <div className="w-full max-w-5xl">

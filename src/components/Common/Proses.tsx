@@ -11,7 +11,7 @@ const steps = [
 
 export default function Proses() {
   return (
-    <div className="bg-gray-900 text-white min-h-screen p-10">
+    <div className="bg-black text-white min-h-screen p-10">
       <h1 className="text-3xl font-bold">Alur Proses Photo <span className="text-white">*</span></h1>
       <h2 className="text-2xl font-semibold">Pixelverse</h2>
       <div className="flex space-x-4 mt-6">

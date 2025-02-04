@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-b bg-[#121629] text-white py-10 px-6">
+    <footer className="bg-gradient-to-b bg-black text-white py-10 px-6">
       <div className="container mx-auto text-center lg:text-left">
         
         {/* Social Media Icons */}

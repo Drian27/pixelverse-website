@@ -52,7 +52,7 @@ export default function Paket() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center gap-12 p-8 bg-[#121629] text-white">
+    <div className="flex flex-col md:flex-row justify-center items-center gap-12 p-8 bg-black text-white">
       {/* Text Section */}
       <div className="max-w-md text-center md:text-left">
         <h2 className="text-4xl font-bold">Choose Your Favourite</h2>

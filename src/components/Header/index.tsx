@@ -2,17 +2,26 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="w-full py-4 from-yellow-50 fixed top-0 left-0 z-50">
-      <nav className="container w-full mx-auto lg:px-4 flex items-center justify-center">
-        {/* Burger Menu (Menu Garis 3 di kanan) */}
-
-        <Link href="/" className="text-white text-2xl font-bold">
+    <header className="w-full py-4 fixed top-0 left-0 z-50 bg-black">
+      <nav className="container w-full mx-auto lg:px-4 flex items-center justify-between">
+        <Link
+          href="/"
+          className="flex items-center gap-8 text-white text-2xl font-bold"
+        >
+          <Image
+            src="/logopixel.png"
+            alt="Pixelverse Logo"
+            width={40}
+            height={40}
+            className="w-auto h-auto"
+          />
           <span className="tracking-wide">PIXELVERSE</span>
         </Link>
 
@@ -41,45 +50,19 @@ export default function Header() {
         <ul
           className={`w-full transition-all duration-300 ease-in-out overflow-hidden ${
             isOpen ? "max-h-screen" : "max-h-0"
-          } lg:max-h-none lg:flex lg:gap-8 lg:items-center bg-black lg:bg-transparent text-sm font-medium`}
-          style={{ marginLeft: "50px" }}
+          } lg:max-h-none lg:flex lg:gap-8 lg:items-center lg:justify-end text-right bg-black lg:bg-transparent text-sm font-medium`}
         >
-          <li className="group py-2 px-4 text-center">
-            <Link
-              href="/"
-              className="text-[#9C9C9C] text-[18px] hover:text-white relative"
-            >
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#605DFF] transition-all duration-300 group-hover:w-full"></span>
-              Home
-            </Link>
-          </li>
-          <li className="group py-2 px-4 text-center">
-            <Link
-              href="/about"
-              className="text-[#9C9C9C] text-[18px] hover:text-white relative"
-            >
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#605DFF] transition-all duration-300 group-hover:w-full"></span>
-              About
-            </Link>
-          </li>
-          <li className="group py-2 px-4 text-center">
-            <Link
-              href="/pricing"
-              className="text-[#9C9C9C] text-[18px] hover:text-white relative"
-            >
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#605DFF] transition-all duration-300 group-hover:w-full"></span>
-              Pricing
-            </Link>
-          </li>
-          <li className="group py-2 px-4 text-center">
-            <Link
-              href="/contact"
-              className="text-[#9C9C9C] text-[18px] hover:text-white relative"
-            >
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#605DFF] transition-all duration-300 group-hover:w-full"></span>
-              Contact
-            </Link>
-          </li>
+          {["Home", "About", "Pricing", "Contact"].map((item) => (
+            <li key={item} className="group py-2 px-4">
+              <Link
+                href={`/${item.toLowerCase()}`}
+                className="text-[#9C9C9C] text-[18px] hover:text-white relative block"
+              >
+                <span className="absolute right-0 -bottom-1 w-0 h-[2px] bg-[#605DFF] transition-all duration-300 group-hover:w-full"></span>
+                {item}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

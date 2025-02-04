@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b bg-[#121629] p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b bg-black p-6">
       {/* Container utama */}
       <div className="flex flex-col lg:flex-row items-center gap-10 max-w-5xl w-full">
         {/* Bagian Kiri: Teks dan Tombol */}
