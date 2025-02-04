@@ -15,7 +15,6 @@ export default function Paket() {
         "Free Maintenance 1 Year",
         "Free Training Sistem",
         "Price Setting in App",
-        "",
       ],
     },
     {
@@ -30,7 +29,6 @@ export default function Paket() {
           "Free Maintenance 1 Year",
           "Free Training Sistem",
           "Price Setting in App",
-          "",
         ],
       },
       {
