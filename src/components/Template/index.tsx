@@ -20,6 +20,11 @@ export default function TestimonySlider() {
     "/template-3.png",
     "/template-4.png",
     "/template-5.png",
+    "/template-1.png",
+    "/template-2.png",
+    "/template-3.png",
+    "/template-4.png",
+    "/template-5.png",
   ];
 
   const totalPages = Math.ceil(images.length / 5);
