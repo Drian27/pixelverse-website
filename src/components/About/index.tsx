@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="p-24 bg-[#121629]">
+    <div className="p-24 bg-black">
       <h1 className="text-4xl text-white font-bold mb-4">
         About Pixelverse Photobooth
       </h1>
