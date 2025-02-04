@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowUpRight, QrCode, Wallet } from "lucide-react";
+import { QrCode, Wallet } from "lucide-react";
 
 export default function Payment() {
   return (

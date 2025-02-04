@@ -6,7 +6,8 @@ import { Swiper as SwiperInstance } from "swiper/types";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode } from "swiper/modules";
+import Image from "next/image";
 
 export default function TestimonySlider() {
   const swiperRef = useRef<SwiperInstance | null>(null);
@@ -61,7 +62,7 @@ export default function TestimonySlider() {
             <SwiperSlide key={index}>
               <div className="relative flex justify-center">
                 <div className="border border-white p-2 bg-white rounded-lg shadow-lg">
-                  <img
+                  <Image
                     src={img}
                     alt={`Template ${index + 1}`}
                     className="rounded-lg object-cover w-full h-64"
