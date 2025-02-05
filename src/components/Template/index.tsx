@@ -37,10 +37,10 @@ export default function TestimonySlider() {
   };
 
   return (
-    <div className="relative bg-black py-16 text-white flex flex-col items-center overflow-hidden">
-      <h2 className="relative text-4xl font-bold mb-6 z-10">Available Templates</h2>
+    <div className="bg-black py-16 text-white flex flex-col items-center">
+      <h2 className="text-4xl font-bold mb-6">Available Templates</h2>
 
-      <div className="relative w-full max-w-5xl z-10">
+      <div className="w-full max-w-5xl">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={5}
@@ -80,7 +80,7 @@ export default function TestimonySlider() {
         </Swiper>
       </div>
 
-      <ul className="relative flex items-center justify-center pt-8 space-x-2 z-10">
+      <ul className="flex items-center justify-center pt-8 space-x-2">
         <li>
           <button
             onClick={() => goToSlide(Math.max(currentPage - 1, 0))}
@@ -124,6 +124,30 @@ export default function TestimonySlider() {
           </button>
         </li>
       </ul>
+
+      {/* Popup Image */}
+      {popupImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+          onClick={() => setPopupImage(null)}
+        >
+          <div className="relative p-4 bg-white rounded-lg shadow-lg max-w-64 w-full">
+            <button
+              className="absolute top-2 right-2 text-black text-2xl"
+              onClick={() => setPopupImage(null)}
+            >
+              &times;
+            </button>
+            <Image
+              src={popupImage}
+              width={200}
+              height={300}
+              alt="Popup Template"
+              className="rounded-lg object-cover w-full"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
