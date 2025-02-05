@@ -17,7 +17,6 @@ export default function Payment() {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6 mt-10 lg:mt-0">
-        {/* Online Payment Box */}
         <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 box-border">
           <QrCode className="text-gray-700 w-10 h-10" />
           <h3 className="font-semibold text-lg mt-4 text-gray-900">
