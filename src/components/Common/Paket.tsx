@@ -18,35 +18,35 @@ export default function Paket() {
       ],
     },
     {
-        name: "Pro Package",
-        price: "25 Jt",
-        headerColor: "bg-blue-600 text-white",
-        bodyColor: "bg-white",
-        features: [
-          "Full Access Sistem",
-          "Custom UI Sistem Booth",
-          "Free Server 1 Year",
-          "Free Maintenance 1 Year",
-          "Free Training Sistem",
-          "Price Setting in App",
-        ],
-      },
-      {
-        name: "Advance Package",
-        price: "55 Jt",
-        headerColor: "bg-orange-600 text-white",
-        bodyColor: "bg-white",
-        features: [
-          "Hardware + Software",
-          "PC Mini i5 Ram 8 Rom 256 Dell",
-          "Monitor Touchscreen Viewsonic 22inc",
-          "Printer Kodak 605",
-          "Kertas Photo Kodak + Tinta",
-          "Box Studio",
-          "Kamera 600d",
-          "Sistem Package Full Service",
-        ],
-      },
+      name: "Pro Package",
+      price: "25 Jt",
+      headerColor: "bg-blue-600 text-white",
+      bodyColor: "bg-white",
+      features: [
+        "Full Access Sistem",
+        "Custom UI Sistem Booth",
+        "Free Server 1 Year",
+        "Free Maintenance 1 Year",
+        "Free Training Sistem",
+        "Price Setting in App",
+      ],
+    },
+    {
+      name: "Advance Package",
+      price: "55 Jt",
+      headerColor: "bg-orange-600 text-white",
+      bodyColor: "bg-white",
+      features: [
+        "Hardware + Software",
+        "PC Mini i5 Ram 8 Rom 256 Dell",
+        "Monitor Touchscreen Viewsonic 22inc",
+        "Printer Kodak 605",
+        "Kertas Photo Kodak + Tinta",
+        "Box Studio",
+        "Kamera 600d",
+        "Sistem Package Full Service",
+      ],
+    },
   ];
 
   return (
@@ -67,7 +67,7 @@ export default function Paket() {
             <div className={`p-6 ${pkg.headerColor}`}>
               <h3 className="text-xl font-bold">{pkg.name}</h3>
               <p className="text-3xl font-extrabold mt-2">
-                RP {pkg.price} RB
+                {pkg.price}
                 <span className="text-lg font-light">/per Month</span>
               </p>
             </div>
