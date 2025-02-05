@@ -6,8 +6,9 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="bg-black text-white py-20 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div className="relative bg-black text-white py-20 px-6 md:px-16 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80 backdrop-blur-xl" />
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
         <div className="relative">
           <Image
             src="/logo-about.svg"
@@ -23,7 +24,7 @@ export default function About() {
           <h1 className="text-4xl font-bold mb-6">
             About <span className="text-[#ef63ff]">Compro Pixel Verse</span>
           </h1>
-          <p className="text-lg text-gray-400 leading-relaxed mb-6">
+          <p className="text-lg text-gray-300 leading-relaxed mb-6">
             At Compro Pixel Verse, we believe in capturing moments and creating
             memories that last a lifetime. Our innovative approach to photobooth
             experiences combines cutting-edge technology with artistic flair,
@@ -33,7 +34,7 @@ export default function About() {
           <h2 className="text-2xl font-semibold mb-4 text-[#ef63ff]">
             Our Services
           </h2>
-          <ul className="text-lg text-gray-400 space-y-4">
+          <ul className="text-lg text-gray-300 space-y-4">
             <li>
               <span className="text-white font-semibold">
                 📸 Photobooth Software:
@@ -69,7 +70,7 @@ export default function About() {
           <h2 className="text-2xl font-semibold mt-8 mb-4 text-[#ef63ff]">
             Why Choose Us?
           </h2>
-          <p className="text-lg text-gray-400 leading-relaxed">
+          <p className="text-lg text-gray-300 leading-relaxed">
             ✅ <span className="text-white font-semibold">Customization:</span>
             Tailor every aspect of your photobooth experience to fit your theme
             and vision.
@@ -86,7 +87,7 @@ export default function About() {
           </p>
 
           <Link href="/contact">
-            <button className="mt-8 bg-[#121629] text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-500 transition">
+            <button className="mt-8 bg-[#121629] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#ef63ff] transition">
               Contact Us
             </button>
           </Link>

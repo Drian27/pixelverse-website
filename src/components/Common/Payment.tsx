@@ -6,6 +6,10 @@ export default function Payment() {
   return (
     <section className="relative py-40 px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between bg-gradient-to-r bg-black">
       <div className="max-w-lg text-center lg:text-left">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="w-72 h-72 bg-[#ef63ff] opacity-30 blur-3xl rounded-full absolute -top-16 -left-16"></div>
+        <div className="w-72 h-72 bg-[#ff63a6] opacity-30 blur-3xl rounded-full absolute bottom-16 right-16"></div>
+      </div>
         <h2 className="text-5xl font-bold text-white leading-tight">
           Security, <span className="text-white">Simplicity,</span>
           <br />
