@@ -1,16 +1,19 @@
-"use client"
+"use client";
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function About() {
   return (
     <div className="bg-black text-white py-20 px-6 md:px-16">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="relative">
-          <img
+          <Image
             src="/logo-about.svg"
             alt="Compro Pixel Verse"
+            width={500}
+            height={300}
             className="w-full rounded-lg shadow-lg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-lg" />
