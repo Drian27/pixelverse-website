@@ -38,11 +38,6 @@ export default function TestimonySlider() {
 
   return (
     <div className="relative bg-black py-16 text-white flex flex-col items-center overflow-hidden">
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-72 h-72 bg-[#ef63ff] opacity-30 blur-3xl rounded-full absolute -top-16 -left-16"></div>
-        <div className="w-72 h-72 bg-[#ff63a6] opacity-30 blur-3xl rounded-full absolute bottom-16 right-16"></div>
-      </div>
-
       <h2 className="relative text-4xl font-bold mb-6 z-10">Available Templates</h2>
 
       <div className="relative w-full max-w-5xl z-10">
