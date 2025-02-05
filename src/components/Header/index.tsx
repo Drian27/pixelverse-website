@@ -13,7 +13,7 @@ export default function Header() {
       <nav className="container w-full mx-auto lg:px-4 flex items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-8 text-white text-2xl font-bold"
+          className="flex items-center gap-6 text-white text-2xl font-bold"
         >
           <Image
             src="/logopixel.png"
