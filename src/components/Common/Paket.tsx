@@ -68,7 +68,7 @@ export default function Paket() {
               <h3 className="text-xl font-bold">{pkg.name}</h3>
               <p className="text-3xl font-extrabold mt-2">
                 {pkg.price}
-                <span className="text-lg font-light">/per Month</span>
+                <span className="text-lg font-light"></span>
               </p>
             </div>
 
