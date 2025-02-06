@@ -1,15 +1,35 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  // Menangani perubahan background saat scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="w-full py-4 fixed top-0 left-0 z-50 bg-black">
+    <header
+      className={`w-full py-4 fixed top-0 left-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-black shadow-lg" : "bg-transparent"
+      }`}
+    >
       <nav className="container w-full mx-auto lg:px-4 flex items-center justify-between">
         <Link
           href="/"
@@ -46,7 +66,6 @@ export default function Header() {
           </svg>
         </button>
 
-        {/* Navigation Links */}
         <ul
           className={`w-full transition-all duration-300 ease-in-out overflow-hidden ${
             isOpen ? "max-h-screen" : "max-h-0"
@@ -56,9 +75,9 @@ export default function Header() {
             <li key={item} className="group py-2 px-4">
               <Link
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="text-[#9C9C9C] text-[18px] hover:text-white relative block"
+                className="text-white text-[18px] hover:text-white relative block"
               >
-                <span className="absolute right-0 -bottom-1 w-0 h-[2px] bg-[#605DFF] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute right-0 -bottom-1 w-0 h-[2px] group-hover:w-full"></span>
                 {item}
               </Link>
             </li>

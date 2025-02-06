@@ -38,7 +38,7 @@ export default function TestimonySlider() {
 
   return (
     <div className="bg-black py-16 text-white flex flex-col items-center">
-      <h2 className="text-4xl font-bold mb-6">Available Templates</h2>
+      <h2 className="text-4xl font-bold mb-6 text-[#ED1F8B]">Available Templates</h2>
 
       <div className="w-full max-w-5xl">
         <Swiper
