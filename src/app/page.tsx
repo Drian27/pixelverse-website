@@ -10,10 +10,10 @@ export default function page() {
   return (
     <div>
         <Body />
+        <Partner />
         <Opsi />
         <Payment />
         <TestimonySlider />
-        <Partner />
     </div>
   )
 }

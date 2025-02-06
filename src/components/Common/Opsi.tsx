@@ -6,11 +6,6 @@ import Image from "next/image";
 export default function Opsi() {
   return (
     <div className="relative flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-black overflow-hidden">
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-72 h-72 bg-[#ef63ff] opacity-30 blur-3xl rounded-full absolute -top-16 -left-16"></div>
-        <div className="w-72 h-72 bg-[#ff63a6] opacity-30 blur-3xl rounded-full absolute bottom-16 right-16"></div>
-      </div>
-
       <div className="relative w-full lg:w-1/2 flex justify-center z-10">
         <Image
           src="/landingPayment.svg"
@@ -22,8 +17,8 @@ export default function Opsi() {
       </div>
 
       <div className="relative w-full lg:w-1/2 text-center lg:text-left z-10">
-        <h3 className="text-gray-400 text-lg font-semibold">
-          Aplikasi Pixelverse →
+        <h3 className="text-[#ED1F8B] text-4xl font-semibold">
+          Aplikasi Pixelverse
         </h3>
         <h2 className="text-4xl font-bold text-white mt-2 leading-tight">
           Kemudahan Pembayaran dengan Transfer & QRIS

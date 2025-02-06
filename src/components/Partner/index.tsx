@@ -13,29 +13,33 @@ const brands = [
   { name: "Photobin.id", logo: "/logo-photobin.png" },
 ];
 
-const scrollingBrands = [...brands, ...brands, ...brands];
+const scrollingBrands = [...brands, ...brands];
 
-export default function Index() {
+export default function PartnersSection() {
   return (
-    <div className="bg-black py-10 text-center overflow-hidden">
-      <h2 className="text-xl md:text-2xl font-bold text-white">Our Partner</h2>
+    <div className="bg-white py-10 text-center overflow-hidden">
+      <h2 className="text-sm md:text-lg font-bold text-[#ED1F8B] uppercase tracking-wide">
+        Our Partners
+      </h2>
+
       <div className="relative mt-6 flex w-full overflow-hidden">
         <motion.div
-          className="flex space-x-10 items-center"
+          className="flex space-x-6 items-center flex-nowrap"
           animate={{ x: ["0%", "-40%"] }}
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-          style={{ display: "flex", minWidth: "150%" }}
         >
           {scrollingBrands.map((brand, index) => (
-            <div key={index} className="flex flex-col items-center text-lg font-semibold text-gray-300">
-              <Image 
-                src={brand.logo} 
-                alt={brand.name} 
-                width={100}
-                height={100}
-                className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+            <div
+              key={index}
+              className="flex items-center justify-center w-32 h-20 md:w-36 md:h-24 lg:w-40 lg:h-28 border border-gray-300 bg-gray-400 p-4"
+            >
+              <Image
+                src={brand.logo}
+                alt={brand.name}
+                width={120}
+                height={80}
+                className="h-full w-auto object-contain"
               />
-              {brand.name}
             </div>
           ))}
         </motion.div>

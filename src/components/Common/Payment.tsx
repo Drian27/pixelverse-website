@@ -1,40 +1,59 @@
 "use client";
 
-import { QrCode, Wallet } from "lucide-react";
+import Image from "next/image";
 
 export default function Payment() {
   return (
-    <section className="relative py-40 px-6 lg:px-16 flex flex-col lg:flex-row items-center justify-between bg-gradient-to-r bg-black">
+    <section className="relative py-20 px-6 lg:px-24 flex flex-col lg:flex-row items-center justify-between bg-black">
+      {/* Kiri: Deskripsi */}
       <div className="max-w-lg text-center lg:text-left">
-        <h2 className="text-5xl font-bold text-white leading-tight">
-          Security, <span className="text-white">Simplicity,</span>
-          <br />
-          <span className="text-gray-500">Easiness.</span>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#ED1F8B] leading-tight">
+          Security, <br />
+          <span className="text-[#ED1F8B]">Simplicity, Easiness</span>
         </h2>
-        <p className="mt-4 text-gray-600">
-          Pixelverse empowers your app with seamless security, effortless simplicity, and intuitive ease, creating the most secure and user-friendly payment experience.
+        <p className="mt-4 text-gray-300 text-sm md:text-base leading-relaxed">
+          Pixelverse empowers your app with seamless security, effortless simplicity, 
+          and intuitive ease—creating the most secure and user-friendly payment experience.
         </p>
       </div>
 
+      {/* Kanan: Opsi Pembayaran */}
       <div className="flex flex-col lg:flex-row gap-6 mt-10 lg:mt-0">
-        <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 box-border">
-          <QrCode className="text-gray-700 w-10 h-10" />
+        {/* Box Pembayaran Online */}
+        <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+          <div className="flex items-center">
+            <Image
+              src="/scan.png"
+              alt="Scan Logo"
+              width={40}
+              height={40}
+              className="w-auto h-auto"
+            />
+          </div>
           <h3 className="font-semibold text-lg mt-4 text-gray-900">
             Online Payments
           </h3>
           <p className="text-gray-600 text-sm mt-2">
-            Scan QRIS Barcode for online payments (eWallet) and capture the moments.
+            Scan the QRIS barcode for online payments (eWallet) and capture the moments.
           </p>
         </div>
 
-        {/* Event-Only Offline Payment Box */}
-        <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 box-border">
-          <Wallet className="text-gray-700 w-10 h-10" />
+        {/* Box Pembayaran Offline (Event-Only) */}
+        <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+          <div className="flex items-center">
+            <Image
+              src="/wallet.png"
+              alt="Wallet Logo"
+              width={40}
+              height={40}
+              className="w-auto h-auto"
+            />
+          </div>
           <h3 className="font-semibold text-lg mt-4 text-gray-900">
             Event-Only Offline Payments
           </h3>
           <p className="text-gray-600 text-sm mt-2">
-            Generate and print a unique barcode from the Admin Dashboard, then allow the Boothlab app to scan it, unlocking exclusive event vouchers for your transaction.
+            Generate and print a unique barcode from the Admin Dashboard, then let the Boothlab app scan it to unlock exclusive event vouchers.
           </p>
         </div>
       </div>
