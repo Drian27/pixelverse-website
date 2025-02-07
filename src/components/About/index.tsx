@@ -22,7 +22,7 @@ export default function About() {
 
         <div>
           <h1 className="text-4xl font-bold mb-6">
-            About <span className="text-[#ef63ff]">Compro Pixel Verse</span>
+            About <span className="text-[#ED1F8B]">Compro Pixel Verse</span>
           </h1>
           <p className="text-lg text-gray-300 leading-relaxed mb-6">
             At Compro Pixel Verse, we believe in capturing moments and creating
@@ -31,7 +31,7 @@ export default function About() {
             making every event unforgettable.
           </p>
 
-          <h2 className="text-2xl font-semibold mb-4 text-[#ef63ff]">
+          <h2 className="text-2xl font-semibold mb-4 text-[#ED1F8B]">
             Our Services
           </h2>
           <ul className="text-lg text-gray-300 space-y-4">
@@ -67,7 +67,7 @@ export default function About() {
             </li>
           </ul>
 
-          <h2 className="text-2xl font-semibold mt-8 mb-4 text-[#ef63ff]">
+          <h2 className="text-2xl font-semibold mt-8 mb-4 text-[#ED1F8B]">
             Why Choose Us?
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed">
