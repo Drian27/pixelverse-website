@@ -46,7 +46,7 @@ export default function Home() {
         width={400}
         height={400}
         quality={100}
-        className="absolute top-[10%] left-[5%] lg:w-[300px] lg:h-auto"
+        className="absolute top-[13%] left-[5%] lg:w-[300px] lg:h-auto"
         style={{ transform: `translate(${offsetX / 2}px, ${offsetY / 2}px)` }}
       />
 
@@ -56,7 +56,7 @@ export default function Home() {
         width={400}
         height={200}
         quality={100}
-        className="absolute bottom-[15%] right-[10%] lg:w-[300px] lg:h-auto"
+        className="absolute bottom-[15%] right-[6%] lg:w-[300px] lg:h-auto"
         style={{ transform: `translate(${offsetX / 3}px, ${offsetY / 3}px)` }}
       />
 
