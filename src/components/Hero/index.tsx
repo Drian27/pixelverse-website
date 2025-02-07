@@ -60,6 +60,16 @@ export default function Home() {
         style={{ transform: `translate(${offsetX / 3}px, ${offsetY / 3}px)` }}
       />
 
+<Image
+        src="/animasi-6.png"
+        alt="Animasi Image 2"
+        width={400}
+        height={200}
+        quality={100}
+        className="absolute bottom-[35%] right-[10%] lg:w-[200px] lg:h-auto"
+        style={{ transform: `translate(${offsetX / 3}px, ${offsetY / 3}px)` }}
+      />
+
       <Image
         src="/animasi-11.png"
         alt="Animasi Image 3"
@@ -76,7 +86,7 @@ export default function Home() {
         width={250}
         height={250}
         quality={100}
-        className="absolute top-[20%] right-[15%] lg:w-[200px] lg:h-auto"
+        className="absolute top-[28%] right-[26%] lg:w-[200px] lg:h-auto"
         style={{ transform: `translate(${offsetX / 4}px, ${offsetY / 4}px)` }}
       />
 
