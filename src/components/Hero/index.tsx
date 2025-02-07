@@ -69,7 +69,7 @@ export default function Home() {
         className="absolute top-[calc(10%+250px)] left-[calc(5%+250px)] lg:w-[200px] lg:h-auto"
         style={{ transform: `translate(${offsetX / 4}px, ${offsetY / 4}px)` }}
       />
-      
+
       <Image
         src="/animasi-10.png"
         alt="Overlay Image 3"
@@ -77,6 +77,16 @@ export default function Home() {
         height={250}
         quality={100}
         className="absolute top-[20%] right-[15%] lg:w-[200px] lg:h-auto"
+        style={{ transform: `translate(${offsetX / 4}px, ${offsetY / 4}px)` }}
+      />
+
+      <Image
+        src="/animasi-5.png"
+        alt="Overlay Image Bottom Left"
+        width={250}
+        height={250}
+        quality={100}
+        className="absolute bottom-[14%] left-[12%] lg:w-[200px] lg:h-auto"
         style={{ transform: `translate(${offsetX / 4}px, ${offsetY / 4}px)` }}
       />
 
