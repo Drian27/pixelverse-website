@@ -60,7 +60,7 @@ export default function Home() {
         style={{ transform: `translate(${offsetX / 3}px, ${offsetY / 3}px)` }}
       />
 
-<Image
+      <Image
         src="/animasi-6.png"
         alt="Animasi Image 2"
         width={400}
@@ -76,7 +76,7 @@ export default function Home() {
         width={250}
         height={250}
         quality={100}
-        className="absolute top-[calc(10%+250px)] left-[calc(5%+250px)] lg:w-[200px] lg:h-auto"
+        className="absolute top-[calc(-5%+250px)] left-[calc(5%+250px)] lg:w-[200px] lg:h-auto"
         style={{ transform: `translate(${offsetX / 4}px, ${offsetY / 4}px)` }}
       />
 
@@ -97,6 +97,36 @@ export default function Home() {
         height={250}
         quality={100}
         className="absolute bottom-[14%] left-[12%] lg:w-[200px] lg:h-auto"
+        style={{ transform: `translate(${offsetX / 4}px, ${offsetY / 4}px)` }}
+      />
+
+      <Image
+        src="/animasi-8.png"
+        alt="Overlay Image Bottom Center"
+        width={250}
+        height={250}
+        quality={100}
+        className="absolute bottom-[15%] left-[40%] transform -translate-x-1/2 lg:w-[200px] lg:h-auto"
+        style={{ transform: `translate(${offsetX / 4}px, ${offsetY / 4}px)` }}
+      />
+
+      <Image
+        src="/animasi-7.png"
+        alt="Overlay Image Bottom Center"
+        width={250}
+        height={250}
+        quality={100}
+        className="absolute bottom-[10%] left-[60%] transform -translate-x-1/2 lg:w-[200px] lg:h-auto"
+        style={{ transform: `translate(${offsetX / 4}px, ${offsetY / 4}px)` }}
+      />
+
+      <Image
+        src="/animasi-9.png"
+        alt="Overlay Image Bottom Center"
+        width={250}
+        height={250}
+        quality={100}
+        className="absolute bottom-[10%] left-[27%] transform -translate-x-1/2 lg:w-[200px] lg:h-auto"
         style={{ transform: `translate(${offsetX / 4}px, ${offsetY / 4}px)` }}
       />
 
