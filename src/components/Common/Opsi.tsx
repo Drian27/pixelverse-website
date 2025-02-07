@@ -16,15 +16,17 @@ export default function Opsi() {
         />
       </div>
 
-      <div className="relative w-full lg:w-1/2 text-center lg:text-left z-10">
-        <h3 className="text-[#ED1F8B] text-4xl font-semibold">
+      <div className="w-full lg:w-1/2 text-left space-y-4">
+        <h3 className="text-[#ED1F8B] text-lg md:text-4xl font-semibold">
           Aplikasi Pixelverse
         </h3>
-        <h2 className="text-4xl font-bold text-white mt-2 leading-tight">
-          Kemudahan Pembayaran dengan Transfer & QRIS
+        <h2 className="text-2xl md:text-4xl font-extrabold text-white leading-snug">
+          Kemudahan Pembayaran dengan <br className="hidden md:block" />
+          Transfer & QRIS
         </h2>
-        <p className="text-gray-300 mt-4 max-w-md">
-          Dengan sistem yang terintegrasi dengan payment gateway dan voucher, pembayaran menjadi lebih cepat, aman, dan nyaman.
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-md">
+          Sistem yang terintegrasi dengan payment gateway dan voucher,
+          pembayaran menjadi lebih cepat, aman, dan nyaman.
         </p>
       </div>
     </div>

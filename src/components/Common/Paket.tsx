@@ -53,8 +53,8 @@ export default function Paket() {
     <div className="flex flex-col md:flex-row justify-center items-center gap-12 p-8 bg-black text-white">
       {/* Text Section */}
       <div className="max-w-md text-center md:text-left">
-        <h2 className="text-4xl font-bold">Choose Your Favourite</h2>
-        <p className="text-2xl mt-2 font-semibold">Pricing Package</p>
+        <h2 className="text-4xl font-bold text-[#ED1F8B]">Choose Your Favourite</h2>
+        <p className="text-2xl mt-2 text-gray-300">Pricing Package</p>
       </div>
 
       {/* Pricing Cards */}

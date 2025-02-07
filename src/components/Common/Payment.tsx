@@ -6,14 +6,14 @@ export default function Payment() {
   return (
     <section className="relative py-20 px-6 lg:px-24 flex flex-col lg:flex-row items-center justify-between bg-black">
       {/* Kiri: Deskripsi */}
-      <div className="max-w-lg text-center lg:text-left">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#ED1F8B] leading-tight">
-          Security, <br />
-          <span className="text-[#ED1F8B]">Simplicity, Easiness</span>
+      <div className="max-w-lg text-left space-y-4">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#ED1F8B] tracking-tight">
+          Security, Simplicity, Easiness
         </h2>
-        <p className="mt-4 text-gray-300 text-sm md:text-base leading-relaxed">
-          Pixelverse empowers your app with seamless security, effortless simplicity, 
-          and intuitive ease—creating the most secure and user-friendly payment experience.
+        <p className="text-gray-300 text-base md:text-lg leading-7 md:leading-8">
+          Pixelverse empowers your app with seamless security, effortless
+          simplicity, and intuitive ease, creating the most secure and
+          user-friendly payment experience.
         </p>
       </div>
 
@@ -34,7 +34,8 @@ export default function Payment() {
             Online Payments
           </h3>
           <p className="text-gray-600 text-sm mt-2">
-            Scan the QRIS barcode for online payments (eWallet) and capture the moments.
+            Scan the QRIS barcode for online payments (eWallet) and capture the
+            moments.
           </p>
         </div>
 
@@ -53,7 +54,8 @@ export default function Payment() {
             Event-Only Offline Payments
           </h3>
           <p className="text-gray-600 text-sm mt-2">
-            Generate and print a unique barcode from the Admin Dashboard, then let the Boothlab app scan it to unlock exclusive event vouchers.
+            Generate and print a unique barcode from the Admin Dashboard, then
+            let the Boothlab app scan it to unlock exclusive event vouchers.
           </p>
         </div>
       </div>
