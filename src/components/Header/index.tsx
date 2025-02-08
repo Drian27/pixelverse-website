@@ -75,7 +75,7 @@ export default function Header() {
             <li key={item} className="group py-2 px-4">
               <Link
                 href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                className="text-white text-[18px] hover:text-white relative block"
+                className="text-white text-[18px] hover:text-[#ED1F8B] relative block"
               >
                 <span className="absolute right-0 -bottom-1 w-0 h-[2px] group-hover:w-full"></span>
                 {item}
