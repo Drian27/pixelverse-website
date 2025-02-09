@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="relative bg-black text-white py-20 px-6 md:px-16 overflow-hidden">
+    <div className="relative bg-black text-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80 backdrop-blur-xl" />
       <div className="relative max-w-6xl mx-auto mb-12">
         <Image
@@ -14,7 +14,7 @@ export default function About() {
           width={1000}
           height={800}
           quality={100}
-          className="w-full rounded-lg shadow-lg"
+          className="w-full rounded-lg shadow-lg mb-10"
         />
       </div>
 
@@ -86,25 +86,39 @@ export default function About() {
         </div>
       </div>
 
-      <div className="relative max-w-6xl mx-auto mt-12 bg-[#ED1F8B] p-8 rounded-lg text-white">
-        <h2 className="text-4xl font-semibold mt-8 mb-4 text-white text-center">
+      <div className="relative w-full mb-12">
+        <Image
+          src="/group.png"
+          alt="Compro Pixel Verse"
+          width={1920}
+          height={1080}
+          quality={100}
+          className="w-full h-auto object-cover"
+          style={{ marginTop: "50px" }}
+        />
+      </div>
+
+      <div className="relative max-w-6xl mx-auto mt-12 p-8 rounded-lg text-[#ED1F8B]">
+        <h2 className="text-4xl font-semibold mt-8 mb-4 text-[#ED1F8B] text-center">
           Why Choose Us?
         </h2>
         <div className="p-8 rounded-lg text-white">
           <p className="text-lg leading-relaxed">
-            <span className="font-semibold">Customization</span>
+            <span className="font-semibold text-[#ED1F8B]">Customization</span>
             <br />
             Tailor every aspect of your photobooth experience to fit your theme
             and vision.
           </p>
           <p className="text-lg leading-relaxed mt-4">
-            <span className="font-semibold">User-Friendly</span>
+            <span className="font-semibold text-[#ED1F8B]">User-Friendly</span>
             <br />
             Our software is designed for everyone—no technical expertise
             required!
           </p>
           <p className="text-lg leading-relaxed mt-4">
-            <span className="font-semibold">Quality & Experience</span>
+            <span className="font-semibold text-[#ED1F8B]">
+              Quality & Experience
+            </span>
             <br />
             With years of industry experience, we ensure your event runs
             smoothly and successfully.

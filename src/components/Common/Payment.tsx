@@ -59,6 +59,17 @@ export default function Payment() {
           </p>
         </div>
       </div>
+      <div className="relative w-full mb-12">
+        <Image
+          src="/group.png"
+          alt="Compro Pixel Verse"
+          width={1920}
+          height={1080}
+          quality={100}
+          className="w-full h-auto object-cover"
+          style={{ marginTop: "50px" }}
+        />
+      </div>
     </section>
   );
 }
