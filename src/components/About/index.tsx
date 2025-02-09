@@ -8,30 +8,39 @@ export default function About() {
   return (
     <div className="relative bg-black text-white py-20 px-6 md:px-16 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80 backdrop-blur-xl" />
-      <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center z-10">
+      <div className="relative max-w-6xl mx-auto grid grid-cols-1 gap-12 items-center z-10">
         <div className="relative">
           <Image
-            src="/logo-about.svg"
+            src="/about-1.png"
             alt="Compro Pixel Verse"
-            width={500}
-            height={300}
+            width={1000}
+            height={800}
+            quality={100}
             className="w-full rounded-lg shadow-lg"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-lg" />
         </div>
-
+        <div className="relative">
+          <Image
+            src="/about-2.png"
+            alt="Compro Pixel Verse"
+            width={1000}
+            height={800}
+            quality={100}
+            className="w-full rounded-lg shadow-lg"
+          />
+        </div>
         <div>
-          <h1 className="text-4xl font-bold mb-6">
-            About <span className="text-[#ED1F8B]">Compro Pixel Verse</span>
+          <h1 className="text-4xl font-bold mb-6 text-[#ED1F8B]">
+            About <span className="text-[#ED1F8B]">PixelVerse</span>
           </h1>
-          <p className="text-lg text-gray-300 leading-relaxed mb-6">
+          <p className="text-xl text-gray-300 leading-relaxed mb-6">
             At Compro Pixel Verse, we believe in capturing moments and creating
             memories that last a lifetime. Our innovative approach to photobooth
             experiences combines cutting-edge technology with artistic flair,
             making every event unforgettable.
           </p>
 
-          <h2 className="text-2xl font-semibold mb-4 text-[#ED1F8B]">
+          <h2 className="text-4xl font-semibold mb-4 text-[#ED1F8B]">
             Our Services
           </h2>
           <ul className="text-lg text-gray-300 space-y-4">
@@ -67,7 +76,7 @@ export default function About() {
             </li>
           </ul>
 
-          <h2 className="text-2xl font-semibold mt-8 mb-4 text-[#ED1F8B]">
+          <h2 className="text-4xl font-semibold mt-8 mb-4 text-[#ED1F8B]">
             Why Choose Us?
           </h2>
           <p className="text-lg text-gray-300 leading-relaxed">
