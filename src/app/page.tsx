@@ -5,6 +5,7 @@ import TestimonySlider from "../components/Template";
 import Opsi from '@/components/Common/Opsi';
 import Payment from '@/components/Common/Payment';
 import Partner from '@/components/Partner';
+import BgPixelVerse from '@/components/Common/bgPixelVerse';
 
 export default function page() {
   return (
@@ -13,6 +14,7 @@ export default function page() {
         <Partner />
         <Opsi />
         <Payment />
+        <BgPixelVerse />
         <TestimonySlider />
     </div>
   )
