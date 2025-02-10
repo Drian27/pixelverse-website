@@ -1,9 +1,11 @@
 "use client";
 
 import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Contact() {
   return (
+    
     <section className="mx-auto px-6 py-12 lg:py-40 flex flex-col lg:flex-row gap-10 bg-black">
       <div className="bg-white shadow-lg rounded-xl p-6 w-full lg:w-1/3 border border-gray-200">
         <h3 className="text-xl font-semibold text-gray-900 mb-5">

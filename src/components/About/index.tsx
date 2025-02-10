@@ -14,7 +14,7 @@ export default function About() {
           width={1000}
           height={800}
           quality={100}
-          className="w-full rounded-lg shadow-lg mb-10"
+          className="w-full rounded-lg shadow-lg mb-10 mt-[175px]"
         />
       </div>
 
@@ -26,7 +26,7 @@ export default function About() {
             width={1000}
             height={800}
             quality={100}
-            className="w-full rounded-lg shadow-lg"
+            className="w-full rounded-lg shadow-lg mt-[170px]"
           />
         </div>
 
@@ -43,7 +43,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="relative max-w-6xl mx-auto mt-20">
+      <div className="relative max-w-6xl mx-auto mt-[165px]">
         <div className="flex flex-col items-start justify-between mb-6">
           <h2 className="text-4xl font-semibold text-[#ED1F8B]">
             Our Services
@@ -86,7 +86,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="relative w-full mb-12">
+      <div className="relative w-full mb-12 mt-[166px]">
         <Image
           src="/group.png"
           alt="Compro Pixel Verse"
@@ -98,7 +98,7 @@ export default function About() {
         />
       </div>
 
-      <div className="relative max-w-6xl mx-auto mt-12 p-8 rounded-lg text-[#ED1F8B]">
+      <div className="relative max-w-6xl mx-auto mt-[166px] p-8 rounded-lg text-[#ED1F8B]">
         <h2 className="text-4xl font-semibold mt-8 mb-4 text-[#ED1F8B] text-center">
           Why Choose Us?
         </h2>
