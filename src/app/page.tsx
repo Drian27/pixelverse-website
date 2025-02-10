@@ -5,6 +5,7 @@ import TestimonySlider from "../components/Template";
 import Opsi from '@/components/Common/Opsi';
 import Payment from '@/components/Pricing';
 import Partner from '@/components/Partner';
+import Choose from '@/components/Choose';
 
 export default function page() {
   return (
@@ -14,6 +15,7 @@ export default function page() {
         <Opsi />
         <Payment />
         <TestimonySlider />
+        <Choose />
     </div>
   )
 }

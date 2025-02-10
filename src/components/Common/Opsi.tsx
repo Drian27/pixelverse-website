@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Opsi() {
   return (
-    <div className="relative flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-16 bg-black overflow-hidden">
+    <div className="relative flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-[140px] bg-black overflow-hidden">
       <div className="relative w-full lg:w-1/2 flex justify-center z-10">
         <Image
           src="/landingPayment.svg"

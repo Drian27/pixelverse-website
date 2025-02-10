@@ -7,7 +7,7 @@ export default function Index() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl">
         <div className="bg-white p-4 rounded-2xl shadow-lg flex items-center">
           <Image
-            src="/box-1.png"
+            src="/.png"
             width={300}
             height={300}
             alt="Photobooth 1"
@@ -16,7 +16,7 @@ export default function Index() {
         </div>
         <div className="bg-white p-4 rounded-2xl shadow-lg flex items-center">
           <Image
-            src="/box-1.png"
+            src="/.png"
             width={300}
             height={300}
             alt="Photobooth 2"
