@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Payment() {
   return (
-    <section className="relative py-[146px] px-6 lg:px-24 flex flex-col lg:flex-row items-center justify-between bg-black">
+    <section className="relative mt-[176px] px-6 lg:px-24 flex flex-col lg:flex-row items-center justify-between bg-black">
       {/* Kiri Deskripsi */}
       <div className="max-w-lg text-left space-y-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#ED1F8B] tracking-tight">
