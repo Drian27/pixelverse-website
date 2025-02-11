@@ -1,7 +1,6 @@
 "use client";
 
 import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
-import Image from "next/image";
 
 export default function Contact() {
   return (
