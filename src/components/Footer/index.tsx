@@ -20,8 +20,9 @@ export default function Footer() {
           <div className="text-center lg:text-right">
             <h3 className="text-2xl font-bold leading-tight">
               So, What You Waiting For? <br />
-              Let's Talk Together Now!
+              Let&#39;s Talk Together Now!
             </h3>
+
             <button className="mt-4 bg-white text-[#ED1F8B] font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition">
               Contact Us
             </button>
