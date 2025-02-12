@@ -3,9 +3,7 @@ import React from "react";
 export default function index() {
   return (
     <div className="relative mt-[144px]">
-      <div className="fixed top-0 left-0 w-full h-full bg-black -z-10"></div>
-
-      {/* Konten */}
+      <div className="fixed top-0 left-0 w-full h-full bg-black -z-10"></div>=
       <div className="relative w-full max-w-3xl mx-auto p-6 md:p-8 text-white">
         <h2 className="text-4xl font-semibold mb-6 text-[#ED1F8B] text-center">
           Why Choose Us?

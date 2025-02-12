@@ -1,10 +1,9 @@
-"use client";
-
+import React from 'react'
 import Image from "next/image";
 
 export default function Pricing() {
   return (
-    <section className="relative mt-[100px] px-6 lg:px-24 flex flex-col items-center justify-between bg-black pb-[200px]">
+    <section className="relative px-6 lg:px-24 flex flex-col items-center justify-between bg-black">
       <div className="max-w-lg text-center space-y-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#ED1F8B] tracking-tight">
           Security, Simplicity, Easiness
