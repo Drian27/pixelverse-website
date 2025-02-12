@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 
-export default function Payment() {
+export default function Pricing() {
   return (
-    <section className="relative mt-[176px] px-6 lg:px-24 flex flex-col lg:flex-row items-center justify-between bg-black">
-      {/* Kiri Deskripsi */}
-      <div className="max-w-lg text-left space-y-4">
+    <section className="relative mt-[100px] px-6 lg:px-24 flex flex-col items-center justify-between bg-black pb-[200px]">
+      <div className="max-w-lg text-center space-y-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#ED1F8B] tracking-tight">
           Security, Simplicity, Easiness
         </h2>
@@ -17,13 +16,30 @@ export default function Payment() {
         </p>
       </div>
 
-      {/* Kanan Opsi Pembayaran */}
-      <div className="flex flex-col lg:flex-row gap-6 mt-10 lg:mt-0">
-        {/* Box Pembayaran Online */}
+      <div className="flex flex-col lg:flex-row gap-6 mt-10 lg:mt-14">
         <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
           <div className="flex items-center">
             <Image
-              src="/scan.png"
+              src="/security.png"
+              alt="Shield Logo"
+              width={40}
+              height={40}
+              className="w-auto h-auto"
+            />
+          </div>
+          <h3 className="font-semibold text-lg mt-4 text-gray-900">
+            Advanced Data Security & Compliance
+          </h3>
+          <p className="text-gray-600 text-sm mt-2">
+            Stay compliant with regulations and protect sensitive patient
+            information.
+          </p>
+        </div>
+
+        <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+          <div className="flex items-center">
+            <Image
+              src="/oneline.png"
               alt="Scan Logo"
               width={40}
               height={40}
@@ -31,19 +47,17 @@ export default function Payment() {
             />
           </div>
           <h3 className="font-semibold text-lg mt-4 text-gray-900">
-            Online Payments
+            Safe And Fast Online Payment
           </h3>
           <p className="text-gray-600 text-sm mt-2">
-            Scan the QRIS barcode for online payments (eWallet) and capture the
-            moments.
+            Scan the QR code for easy and fast online payment (E-Wallet).
           </p>
         </div>
 
-        {/* Box Pembayaran Offline (Event-Only) */}
         <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
           <div className="flex items-center">
             <Image
-              src="/wallet.png"
+              src="/offline.png"
               alt="Wallet Logo"
               width={40}
               height={40}
@@ -54,8 +68,8 @@ export default function Payment() {
             Event-Only Offline Payments
           </h3>
           <p className="text-gray-600 text-sm mt-2">
-            Generate and print a unique barcode from the Admin Dashboard, then
-            let the Boothlab app scan it to unlock exclusive event vouchers.
+            Boothlab Apps generates unique codes to unlock exclusive event
+            vouchers.
           </p>
         </div>
       </div>

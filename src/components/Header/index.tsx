@@ -36,13 +36,12 @@ export default function Header() {
           className="flex items-center gap-6 text-white text-2xl font-bold"
         >
           <Image
-            src="/logopixel.png"
+            src="/logoverse.png"
             alt="Pixelverse Logo"
-            width={40}
-            height={40}
+            width={180}
+            height={100}
             className="w-auto h-auto"
           />
-          <span className="tracking-wide">PIXELVERSE</span>
         </Link>
 
         <button

@@ -43,7 +43,7 @@ export default function Pricing() {
   ];
 
   return (
-    <section className="bg-black py-16 px-6 lg:px-24 flex flex-col items-center mt-[180px]">
+    <section className="bg-black py-16 px-6 lg:px-24 flex flex-col items-center mt-[176px]">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
         {packages.map((pkg, index) => (
           <div key={index} className="bg-white p-6 rounded-xl shadow-md border border-gray-200 w-80">

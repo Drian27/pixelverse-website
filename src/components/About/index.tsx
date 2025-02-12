@@ -98,7 +98,7 @@ export default function About() {
         />
       </div>
 
-      <div className="relative max-w-6xl mx-auto mt-[166px] p-8 rounded-lg text-[#ED1F8B]">
+      <div className="relative max-w-6xl mx-auto mt-[166px] mb-40 p-8 rounded-lg text-[#ED1F8B]">
         <h2 className="text-4xl font-semibold mt-8 mb-4 text-[#ED1F8B] text-center">
           Why Choose Us?
         </h2>
