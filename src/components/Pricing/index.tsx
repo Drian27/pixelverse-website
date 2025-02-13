@@ -15,7 +15,7 @@ export default function Pricing() {
   }, []);
 
   return (
-    <section className="relative px-6 lg:px-24 flex flex-col items-center justify-between bg-black -mb-[150px] pb-[150px]">
+    <section className="relative px-6 lg:px-24 flex flex-col items-center justify-between bg-black -mb-[10px] pb-[150px]">
       <div className="max-w-lg text-center space-y-4" data-aos="fade-up">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#ED1F8B] tracking-tight">
           Security, Simplicity, Easiness
