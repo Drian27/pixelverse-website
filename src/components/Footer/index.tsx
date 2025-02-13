@@ -23,9 +23,12 @@ export default function Footer() {
               Let&#39;s Talk Together Now!
             </h3>
 
-            <button className="mt-4 bg-white text-[#ED1F8B] font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition">
+            <Link
+              href="/contact"
+              className="mt-4 bg-white text-[#ED1F8B] font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
 
