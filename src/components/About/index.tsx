@@ -8,16 +8,29 @@ import "aos/dist/aos.css";
 export default function About() {
   useEffect(() => {
     AOS.init({
-      duration: 550,
+      duration: 500,
       easing: "ease-out-cubic",
       once: true,
+      offset: 50,
     });
-    AOS.refresh(); // Tambahkan ini untuk memastikan animasi berjalan saat pertama kali dimuat
+    AOS.refreshHard();
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      AOS.refresh();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
     <div className="relative bg-black text-white overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/80 backdrop-blur-xl" />
+
       <div className="relative max-w-6xl mx-auto mb-12" data-aos="fade-up">
         <Image
           src="/about-3.png"
@@ -32,6 +45,7 @@ export default function About() {
       <div
         className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10"
         data-aos="fade-left"
+        data-aos-delay="100"
       >
         <div className="w-full md:w-1/2">
           <Image
