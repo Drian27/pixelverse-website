@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 export default function Pricing() {
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 450,
       easing: "ease-out-cubic",
       once: true,
     });

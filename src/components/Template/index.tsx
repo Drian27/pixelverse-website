@@ -16,7 +16,7 @@ export default function TestimonySlider() {
 
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 400,
       easing: "ease-in-out",
       once: true,
     });
