@@ -1,10 +1,22 @@
-import React from 'react'
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Pricing() {
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease-out-cubic",
+      once: true,
+    });
+  }, []);
+
   return (
-    <section className="relative px-6 lg:px-24 flex flex-col items-center justify-between bg-black">
-      <div className="max-w-lg text-center space-y-4">
+    <section className="relative px-6 lg:px-24 flex flex-col items-center justify-between bg-black -mb-[150px] pb-[150px]">
+      <div className="max-w-lg text-center space-y-4" data-aos="fade-up">
         <h2 className="text-3xl md:text-4xl font-extrabold text-[#ED1F8B] tracking-tight">
           Security, Simplicity, Easiness
         </h2>
@@ -16,7 +28,11 @@ export default function Pricing() {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6 mt-10 lg:mt-14">
-        <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+        <div
+          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div className="flex items-center">
             <Image
               src="/security.png"
@@ -35,7 +51,11 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+        <div
+          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           <div className="flex items-center">
             <Image
               src="/oneline.png"
@@ -53,7 +73,11 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+        <div
+          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
           <div className="flex items-center">
             <Image
               src="/offline.png"

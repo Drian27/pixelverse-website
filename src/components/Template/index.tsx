@@ -1,18 +1,26 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperInstance } from "swiper/types";
 import "swiper/css";
 import "swiper/css/free-mode";
-import "swiper/css/pagination";
 import { FreeMode } from "swiper/modules";
 import Image from "next/image";
+import AOS from "aos";
 
 export default function TestimonySlider() {
   const swiperRef = useRef<SwiperInstance | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [popupImage, setPopupImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 500,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
 
   const images = [
     "/template-1.png",
@@ -39,17 +47,24 @@ export default function TestimonySlider() {
   return (
     <div className="bg-black py-16 text-white flex flex-col items-center">
       <Image
-          src="/group.png"
-          alt="Compro Pixel Verse"
-          width={1920}
-          height={1080}
-          quality={100}
-          className="w-full h-auto object-cover"
-          style={{ marginTop: "50px" }}
-        />
+        src="/group.png"
+        alt="Compro Pixel Verse"
+        width={1920}
+        height={1080}
+        quality={100}
+        className="w-full h-auto object-cover"
+        style={{ marginTop: "50px" }}
+        data-aos="fade-up"
+      />
 
-      <h2 className="text-4xl font-bold mb-6 text-[#ED1F8B] mt-[122px]">Available Templates</h2>
-      <div className="w-full max-w-5xl">
+      <h2
+        className="text-4xl font-bold mb-6 text-[#ED1F8B] mt-[122px]"
+        data-aos="fade-up"
+      >
+        Available Templates
+      </h2>
+
+      <div className="w-full max-w-5xl" data-aos="fade-up">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={5}
@@ -69,10 +84,10 @@ export default function TestimonySlider() {
           }}
         >
           {images.map((img, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} data-aos="zoom-in">
               <div className="relative flex justify-center">
                 <div
-                  className="border border-white p-2 bg-white rounded-lg shadow-lg cursor-pointer"
+                  className="border border-white p-2 bg-white rounded-lg shadow-lg cursor-pointer transition-transform hover:scale-105"
                   onClick={() => setPopupImage(img)}
                 >
                   <Image
@@ -121,7 +136,9 @@ export default function TestimonySlider() {
 
         <li>
           <button
-            onClick={() => goToSlide(Math.min(currentPage + 1, totalPages - 1))}
+            onClick={() =>
+              goToSlide(Math.min(currentPage + 1, totalPages - 1))
+            }
             disabled={currentPage === totalPages - 1}
             className={`flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition ${
               currentPage === totalPages - 1
