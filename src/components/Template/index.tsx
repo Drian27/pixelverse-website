@@ -16,7 +16,7 @@ export default function TestimonySlider() {
 
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 300,
       easing: "ease-in-out",
       once: true,
     });
@@ -151,7 +151,6 @@ export default function TestimonySlider() {
         </li>
       </ul>
 
-      {/* Popup Image */}
       {popupImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"

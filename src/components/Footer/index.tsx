@@ -25,7 +25,7 @@ export default function Footer() {
 
             <Link
               href="/contact"
-              className="mt-4 bg-white text-[#ED1F8B] font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"
+              className="mb-10  mt-4 bg-white text-[#ED1F8B] font-semibold py-2 px-6 rounded-full hover:bg-gray-100 transition"
             >
               Contact Us
             </Link>

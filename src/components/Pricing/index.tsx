@@ -11,7 +11,7 @@ export default function Pricing() {
       duration: 500,
       easing: "ease-out-cubic",
       once: true,
-      offset: 50, // Kurangi offset agar animasi dimulai lebih awal
+      offset: 50,
     });
     AOS.refreshHard();
   }, []);
