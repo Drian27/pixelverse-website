@@ -33,8 +33,8 @@ export default function Opsi() {
         <Image
           src="/group-1.png"
           alt="Payment Illustration"
-          width={1400}
-          height={1100}
+          width={1800}
+          height={1500}
           className="mx-auto w-auto h-auto"
         />
       </div>

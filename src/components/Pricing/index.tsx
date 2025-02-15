@@ -11,20 +11,7 @@ export default function Pricing() {
       duration: 500,
       easing: "ease-out-cubic",
       once: true,
-      offset: 50,
     });
-    AOS.refreshHard();
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      AOS.refresh();
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
   }, []);
 
   return (
@@ -42,8 +29,9 @@ export default function Pricing() {
 
       <div className="flex flex-col lg:flex-row gap-6 mt-10 lg:mt-14">
         <div
-          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 will-change-transform"
+          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
           data-aos="fade-up"
+          data-aos-delay="200"
         >
           <div className="flex items-center">
             <Image
@@ -64,8 +52,9 @@ export default function Pricing() {
         </div>
 
         <div
-          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 will-change-transform"
+          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
           data-aos="fade-up"
+          data-aos-delay="400"
         >
           <div className="flex items-center">
             <Image
@@ -85,8 +74,9 @@ export default function Pricing() {
         </div>
 
         <div
-          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 will-change-transform"
+          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
           data-aos="fade-up"
+          data-aos-delay="600"
         >
           <div className="flex items-center">
             <Image

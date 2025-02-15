@@ -2,6 +2,7 @@
 
 import Paket from "@/components/Common/Paket";
 import Payment from "@/components/Pricing";
+import Hardware from "@/components/Hardware";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import AOS from "aos";
@@ -34,6 +35,7 @@ export default function Page() {
       </div>
       <Paket />
       <Payment />
+      <Hardware />
     </div>
   );
 }
