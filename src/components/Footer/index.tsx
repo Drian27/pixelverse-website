@@ -18,7 +18,7 @@ export default function Footer() {
             />
           </div>
           <div className="text-center lg:text-right">
-            <h3 className="text-2xl font-bold leading-tight">
+            <h3 className="text-2xl font-bold leading-tight mb-10">
               So, What You Waiting For? <br />
               Let&#39;s Talk Together Now!
             </h3>
