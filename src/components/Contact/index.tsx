@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
