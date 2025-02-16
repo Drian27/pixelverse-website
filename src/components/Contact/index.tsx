@@ -29,7 +29,7 @@ export default function Contact() {
         <h2 className="text-4xl font-bold mb-4">Contact US</h2>
         <p className="text-gray-400 leading-relaxed">
           Do you have any questions about the service or scaling on our
-          platform? We're here to help. Chat to our friendly 24/7 and get
+          platform? {"We're"} here to help. Chat to our friendly 24/7 and get
           onboard in less than 5 minutes.
         </p>
 
