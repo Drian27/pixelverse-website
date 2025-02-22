@@ -93,7 +93,7 @@ export default function Pricing() {
                 <li
                   key={i}
                   className="flex items-center gap-2"
-                  data-aos="fade-right"
+                  data-aos="fade-up"
                   data-aos-delay={index * 200 + (i + 1) * 100}
                 >
                   <FaCheckCircle size={16} color="#6b7280" />
