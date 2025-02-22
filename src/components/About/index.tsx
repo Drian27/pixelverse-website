@@ -1,31 +1,41 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import AOS from "aos";
 import Image from "next/image";
 import "aos/dist/aos.css";
 
+const debounce = (func: () => void, delay: number) => {
+  let timeout: NodeJS.Timeout;
+  return () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(func, delay);
+  };
+};
+
 export default function About() {
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 700,
       easing: "ease-out-cubic",
       once: true,
       offset: 50,
     });
-    AOS.refreshHard();
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
+  const handleScroll = useCallback(
+    debounce(() => {
       AOS.refresh();
-    };
+    }, 100),
+    []
+  );
 
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   return (
     <div className="relative bg-black text-white overflow-hidden">
@@ -43,22 +53,20 @@ export default function About() {
       </div>
 
       <div
-        className="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10"
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12"
         data-aos="fade-left"
         data-aos-delay="100"
       >
-        <div className="w-full md:w-1/2">
-          <Image
-            src="/about-2.png"
-            alt="Compro Pixel Verse"
-            width={1000}
-            height={800}
-            quality={100}
-            className="w-full rounded-lg shadow-lg mt-[170px]"
-          />
-        </div>
+        <Image
+          src="/about-2.png"
+          alt="Compro Pixel Verse"
+          width={1000}
+          height={800}
+          quality={100}
+          className="w-full rounded-lg shadow-lg"
+        />
 
-        <div className="w-full md:w-1/2">
+        <div>
           <h1 className="text-4xl font-bold mb-6 text-[#ED1F8B]">
             About <span className="text-[#ED1F8B]">Us</span>
           </h1>
@@ -71,60 +79,62 @@ export default function About() {
         </div>
       </div>
 
-      <div className="relative max-w-6xl mx-auto mt-[165px]">
-        <div
-          className="flex flex-col items-start justify-between mb-6"
-          data-aos="fade-right"
-        >
+      <div className="max-w-6xl mx-auto mt-[165px] space-y-6">
+        <div className="space-y-2" data-aos="fade-right">
           <h2 className="text-4xl font-semibold text-[#ED1F8B]">
             Our Services
           </h2>
-          <p className="text-lg text-gray-300 mt-2">
+          <p className="text-lg text-gray-300">
             Provide The Best Service With Out Of The Box Ideas
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div
-            className="bg-[#ED1F8B] text-white p-6 rounded-xl relative transition transform hover:scale-105 hover:shadow-xl cursor-pointer"
-            data-aos="zoom-in"
-          >
-            <span className="text-4xl font-bold">01</span>
-            <h3 className="text-2xl font-semibold mt-2">Photobooth Software</h3>
-            <p className="text-gray-200 mt-2">
-              Our intuitive photobooth software is designed for easy integration
-              and user-friendly operation.
-            </p>
-            <span className="absolute top-4 right-4 text-white text-xl">↗</span>
-          </div>
-
-          <div
-            className="bg-[#ED1F8B] text-white p-6 rounded-xl relative transition transform hover:scale-105 hover:shadow-xl cursor-pointer"
-            data-aos="zoom-in"
-          >
-            <span className="text-4xl font-bold">02</span>
-            <h3 className="text-2xl font-semibold mt-2">Engaging Templates</h3>
-            <p className="text-gray-200 mt-2">
-              We understand that every event is unique, which is why we provide
-              a range of attractive templates.
-            </p>
-            <span className="absolute top-4 right-4 text-white text-xl">↗</span>
-          </div>
-
-          <div
-            className="bg-[#ED1F8B] text-white p-6 rounded-xl relative transition transform hover:scale-105 hover:shadow-xl cursor-pointer"
-            data-aos="zoom-in"
-          >
-            <span className="text-4xl font-bold">03</span>
-            <h3 className="text-2xl font-semibold mt-2">Box Studio Booth</h3>
-            <p className="text-gray-200 mt-2">
-              Our exclusive box studio booth is a game-changer in the world of
-              event photography.
-            </p>
-            <span className="absolute top-4 right-4 text-white text-xl">↗</span>
-          </div>
+          {services.map((service, index) => (
+            <ServiceCard key={index} index={index} {...service} />
+          ))}
         </div>
       </div>
     </div>
   );
 }
+
+// Service Card Component
+interface ServiceCardProps {
+  index: number;
+  title: string;
+  description: string;
+}
+
+const ServiceCard = ({ index, title, description }: ServiceCardProps) => {
+  return (
+    <div
+      className="bg-[#ED1F8B] text-white p-6 rounded-xl relative transition transform hover:scale-105 hover:shadow-xl cursor-pointer"
+      data-aos="zoom-in"
+      data-aos-delay={index * 100}
+    >
+      <span className="text-4xl font-bold">{`0${index + 1}`}</span>
+      <h3 className="text-2xl font-semibold mt-2">{title}</h3>
+      <p className="text-gray-200 mt-2">{description}</p>
+      <span className="absolute top-4 right-4 text-white text-xl">↗</span>
+    </div>
+  );
+};
+
+const services = [
+  {
+    title: "Photobooth Software",
+    description:
+      "Our intuitive photobooth software is designed for easy integration and user-friendly operation.",
+  },
+  {
+    title: "Engaging Templates",
+    description:
+      "We understand that every event is unique, which is why we provide a range of attractive templates.",
+  },
+  {
+    title: "Box Studio Booth",
+    description:
+      "Our exclusive box studio booth is a game-changer in the world of event photography.",
+  },
+];
