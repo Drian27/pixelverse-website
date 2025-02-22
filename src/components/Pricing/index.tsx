@@ -5,6 +5,44 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+const features = [
+  {
+    imgSrc: "/security.png",
+    imgAlt: "Shield Logo",
+    title: "Advanced Data Security & Compliance",
+    description:
+      "Stay compliant with regulations and protect sensitive patient information.",
+  },
+  {
+    imgSrc: "/oneline.png",
+    imgAlt: "Scan Logo",
+    title: "Safe And Fast Online Payment",
+    description:
+      "Scan the QR code for easy and fast online payment (E-Wallet).",
+  },
+  {
+    imgSrc: "/offline.png",
+    imgAlt: "Wallet Logo",
+    title: "Event-Only Offline Payments",
+    description:
+      "Boothlab Apps generates unique codes to unlock exclusive event vouchers.",
+  },
+];
+
+const Card = ({ imgSrc, imgAlt, title, description }: any) => (
+  <div
+    className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
+    data-aos="fade-up"
+    data-aos-delay="0"
+  >
+    <div className="flex items-center">
+      <Image src={imgSrc} alt={imgAlt} width={40} height={40} />
+    </div>
+    <h3 className="font-semibold text-lg mt-4 text-gray-900">{title}</h3>
+    <p className="text-gray-600 text-sm mt-2">{description}</p>
+  </div>
+);
+
 export default function Pricing() {
   useEffect(() => {
     AOS.init({
@@ -28,73 +66,15 @@ export default function Pricing() {
       </div>
 
       <div className="flex flex-col lg:flex-row gap-6 mt-10 lg:mt-14">
-        <div
-          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div className="flex items-center">
-            <Image
-              src="/security.png"
-              alt="Shield Logo"
-              width={40}
-              height={40}
-              className="w-auto h-auto"
-            />
-          </div>
-          <h3 className="font-semibold text-lg mt-4 text-gray-900">
-            Advanced Data Security & Compliance
-          </h3>
-          <p className="text-gray-600 text-sm mt-2">
-            Stay compliant with regulations and protect sensitive patient
-            information.
-          </p>
-        </div>
-
-        <div
-          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          <div className="flex items-center">
-            <Image
-              src="/oneline.png"
-              alt="Scan Logo"
-              width={40}
-              height={40}
-              className="w-auto h-auto"
-            />
-          </div>
-          <h3 className="font-semibold text-lg mt-4 text-gray-900">
-            Safe And Fast Online Payment
-          </h3>
-          <p className="text-gray-600 text-sm mt-2">
-            Scan the QR code for easy and fast online payment (E-Wallet).
-          </p>
-        </div>
-
-        <div
-          className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-          <div className="flex items-center">
-            <Image
-              src="/offline.png"
-              alt="Wallet Logo"
-              width={40}
-              height={40}
-              className="w-auto h-auto"
-            />
-          </div>
-          <h3 className="font-semibold text-lg mt-4 text-gray-900">
-            Event-Only Offline Payments
-          </h3>
-          <p className="text-gray-600 text-sm mt-2">
-            Boothlab Apps generates unique codes to unlock exclusive event
-            vouchers.
-          </p>
-        </div>
+        {features.map((feature, index) => (
+          <Card
+            key={index}
+            imgSrc={feature.imgSrc}
+            imgAlt={feature.imgAlt}
+            title={feature.title}
+            description={feature.description}
+          />
+        ))}
       </div>
     </section>
   );
