@@ -5,7 +5,14 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const features = [
+interface Feature {
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+  description: string;
+}
+
+const features: Feature[] = [
   {
     imgSrc: "/security.png",
     imgAlt: "Shield Logo",
@@ -29,7 +36,14 @@ const features = [
   },
 ];
 
-const Card = ({ imgSrc, imgAlt, title, description }: any) => (
+interface CardProps {
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+  description: string;
+}
+
+const Card = ({ imgSrc, imgAlt, title, description }: CardProps) => (
   <div
     className="w-80 p-6 bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300"
     data-aos="fade-up"
