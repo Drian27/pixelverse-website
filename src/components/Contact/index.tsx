@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function Contact() {
-  const [selectedServices, setSelectedServices] = useState<string[]>([]);
+  // const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
   // const services = [
   //   "Web & App Development",
@@ -12,16 +12,16 @@ export default function Contact() {
   //   "Search Engine Marketing",
   // ];
 
-  const toggleService = (service: string) => {
-    setSelectedServices((prev) => {
-      const isSelected = prev.includes(service);
-      const updatedServices = isSelected
-        ? prev.filter((item) => item !== service)
-        : [...prev, service];
-      console.log("Selected Services:", updatedServices);
-      return updatedServices;
-    });
-  };
+  // const toggleService = (service: string) => {
+  //   setSelectedServices((prev) => {
+  //     const isSelected = prev.includes(service);
+  //     const updatedServices = isSelected
+  //       ? prev.filter((item) => item !== service)
+  //       : [...prev, service];
+  //     console.log("Selected Services:", updatedServices);
+  //     return updatedServices;
+  //   });
+  // };
 
   return (
     <section className="mx-auto px-6 py-12 lg:py-40 flex flex-col lg:flex-row gap-10 bg-black text-white">
