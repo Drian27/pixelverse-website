@@ -3,14 +3,14 @@ import React, { useState } from "react";
 export default function Contact() {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
 
-  const services = [
-    "Web & App Development",
-    "Social Media Marketing",
-    "Email Marketing",
-    "Creative & Content",
-    "Digital Advertising & PPC",
-    "Search Engine Marketing",
-  ];
+  // const services = [
+  //   "Web & App Development",
+  //   "Social Media Marketing",
+  //   "Email Marketing",
+  //   "Creative & Content",
+  //   "Digital Advertising & PPC",
+  //   "Search Engine Marketing",
+  // ];
 
   const toggleService = (service: string) => {
     setSelectedServices((prev) => {
@@ -85,7 +85,7 @@ export default function Contact() {
             className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black outline-none transition"
           ></textarea>
 
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold mb-2">Services</h4>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 text-gray-600">
               {services.map((service, index) => (
@@ -103,7 +103,7 @@ export default function Contact() {
                 </label>
               ))}
             </div>
-          </div>
+          </div> */}
 
           <button className="mt-4 w-full bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-pink-600 transition">
             Send message
