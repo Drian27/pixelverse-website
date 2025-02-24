@@ -1,26 +1,17 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperInstance } from "swiper/types";
 import "swiper/css";
 import "swiper/css/free-mode";
 import { FreeMode } from "swiper/modules";
 import Image from "next/image";
-import AOS from "aos";
 
 export default function TestimonySlider() {
   const swiperRef = useRef<SwiperInstance | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [popupImage, setPopupImage] = useState<string | null>(null);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 300,
-      easing: "ease-in-out",
-      once: true,
-    });
-  }, []);
 
   const images = [
     "/template-1.png",
@@ -54,17 +45,13 @@ export default function TestimonySlider() {
         quality={100}
         className="w-full h-auto object-cover"
         style={{ marginTop: "50px" }}
-        data-aos="fade-up"
       />
 
-      <h2
-        className="text-4xl font-bold mb-6 text-[#ED1F8B] mt-[122px]"
-        data-aos="fade-up"
-      >
+      <h2 className="text-4xl font-bold mb-6 text-[#ED1F8B] mt-[122px]">
         Available Templates
       </h2>
 
-      <div className="w-full max-w-5xl" data-aos="fade-up">
+      <div className="w-full max-w-5xl">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           slidesPerView={5}
@@ -84,7 +71,7 @@ export default function TestimonySlider() {
           }}
         >
           {images.map((img, index) => (
-            <SwiperSlide key={index} data-aos="zoom-in">
+            <SwiperSlide key={index}>
               <div className="relative flex justify-center">
                 <div
                   className="border border-white p-2 bg-white rounded-lg shadow-lg cursor-pointer transition-transform hover:scale-105"
