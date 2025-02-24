@@ -1,6 +1,6 @@
 import About from '@/components/About'
 import React from 'react'
-import History from '@/components/History';
+// import History from '@/components/History';
 import Chooso from '@/components/Choose';
 
 export default function page() {
@@ -8,7 +8,7 @@ export default function page() {
     <div>
       <About />
       <Chooso />
-      <History />
+      {/* <History /> */}
     </div>
   )
 }
