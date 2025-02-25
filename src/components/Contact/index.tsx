@@ -105,7 +105,13 @@ export default function Contact() {
             </div>
           </div> */}
 
-          <button className="mt-4 w-full bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-pink-600 transition">
+          <button
+            className="mt-4 w-full bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-pink-600 transition"
+            onClick={() =>
+              (window.location.href =
+                "mailto:muhamaddrian05@gmail.com?subject=Contact Us&body=Hello")
+            }
+          >
             Send message
           </button>
         </form>
