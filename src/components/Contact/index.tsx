@@ -1,26 +1,49 @@
-"use client";
-
-import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
+import React from "react";
 
 export default function Contact() {
+  // const [selectedServices, setSelectedServices] = useState<string[]>([]);
+
+  // const services = [
+  //   "Web & App Development",
+  //   "Social Media Marketing",
+  //   "Email Marketing",
+  //   "Creative & Content",
+  //   "Digital Advertising & PPC",
+  //   "Search Engine Marketing",
+  // ];
+
+  // const toggleService = (service: string) => {
+  //   setSelectedServices((prev) => {
+  //     const isSelected = prev.includes(service);
+  //     const updatedServices = isSelected
+  //       ? prev.filter((item) => item !== service)
+  //       : [...prev, service];
+  //     console.log("Selected Services:", updatedServices);
+  //     return updatedServices;
+  //   });
+  // };
+
   return (
-    <section className="mx-auto px-6 py-12 lg:py-40 flex flex-col lg:flex-row gap-10 bg-black">
-      <div className="bg-white shadow-lg rounded-xl p-6 w-full lg:w-1/3 border border-gray-200">
-        <h3 className="text-xl font-semibold text-gray-900 mb-5">
-          Bogor, Indonesia
-        </h3>
-        <div className="space-y-4 text-gray-700">
-          <div className="flex items-center gap-3">
-            <Phone className="text-[#121629] w-5 h-5" />
-            <span>+62 896-3823-3061</span>
+    <section className="mx-auto px-6 py-12 lg:py-40 flex flex-col lg:flex-row gap-10 bg-black text-white">
+      <div className="w-full lg:w-1/2 space-y-6 text-white">
+        <h2 className="text-4xl font-bold mb-4">Contact US</h2>
+        <p className="text-gray-400 leading-relaxed">
+          Do you have any questions about the service or scaling on our
+          platform? {"We're"} here to help. Chat to our friendly 24/7 and get
+          onboard in less than 5 minutes.
+        </p>
+
+        <div className="space-y-4 text-gray-300">
+          <div className="flex items-center gap-4">
+            <span className="text-lg">+62 896-3823-3061</span>
           </div>
-          <div className="flex items-center gap-3">
-            <Mail className="text-[#121629] w-5 h-5" />
-            <span>pixelverse.id</span>
+
+          <div className="flex items-center gap-4">
+            <span className="text-lg">pixelverse.box@gmail.com</span>
           </div>
-          <div className="flex items-start gap-3">
-            <MapPin className="text-[#121629] w-5 h-5 mt-1" />
-            <span className="leading-relaxed">
+
+          <div className="flex items-start gap-4">
+            <span className="text-lg leading-relaxed">
               Villa Bogor Indah 5, Cluster Pelikan Blok CE 11 No 16, Kota Bogor,
               Jawa Barat 16161
             </span>
@@ -28,86 +51,69 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Formulir Kontak */}
-      <div className="bg-gray-100 shadow-lg rounded-xl p-6 lg:p-8 w-full lg:w-2/3">
-        <h3 className="text-lg font-semibold text-gray-900 mb-5">
-          Mulailah berkonsultasi dengan kami
-        </h3>
-        <form className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Nama & Email */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
-              Nama Lengkap
-            </label>
+      <div className="bg-white shadow-lg rounded-xl p-6 lg:p-8 w-full lg:w-1/2 text-gray-900">
+        <h3 className="text-2xl font-bold mb-2">Get in Touch</h3>
+        <p className="text-gray-600 mb-6">You can reach us anytime</p>
+        <form className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <input
               type="text"
-              placeholder="Nama Lengkap"
+              placeholder="Full name"
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black outline-none transition"
             />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
-              Alamat Email
-            </label>
             <input
               type="email"
-              placeholder="example@gmail.com"
+              placeholder="Your email"
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black outline-none transition"
             />
           </div>
-
-          {/* Nomor Telepon & Subjek */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
-              Nomor Telepon (Optional)
-            </label>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <input
               type="tel"
-              placeholder="+62 856 **** ****"
+              placeholder="+62  Phone number"
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black outline-none transition"
             />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
-              Subjek
-            </label>
             <input
               type="text"
-              placeholder="Subjek"
+              placeholder="Subject"
               className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black outline-none transition"
             />
           </div>
+          <textarea
+            rows={4}
+            placeholder="Leave us a message..."
+            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black outline-none transition"
+          ></textarea>
 
-          {/* Pesan */}
-          <div className="lg:col-span-2">
-            <label className="block text-gray-700 font-medium mb-1">
-              Apa yang bisa kami bantu?
-            </label>
-            <textarea
-              rows={4}
-              placeholder="Tulis Pesan Disini"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black outline-none transition"
-            ></textarea>
-          </div>
+          {/* <div>
+            <h4 className="text-lg font-semibold mb-2">Services</h4>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 text-gray-600">
+              {services.map((service, index) => (
+                <label
+                  key={index}
+                  className="flex items-center gap-2 cursor-pointer"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedServices.includes(service)}
+                    onChange={() => toggleService(service)}
+                    className="w-5 h-5 accent-pink-500 cursor-pointer"
+                  />
+                  {service}
+                </label>
+              ))}
+            </div>
+          </div> */}
 
-          {/* Checkbox & Button */}
-          <div className="lg:col-span-2 flex items-start gap-2 text-gray-600">
-            <input
-              type="checkbox"
-              className="w-5 h-5 accent-white cursor-pointer"
-            />
-            <span>
-              Alamat email Anda tidak akan dipublikasikan. Bidang yang wajib
-              diisi ditandai
-            </span>
-          </div>
-
-          {/* Submit Button */}
-          <div className="lg:col-span-2">
-            <button className="mt-4 flex items-center justify-center gap-2 bg-[#121629] text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-slate-500 transition">
-              Submit Now <ArrowUpRight size={18} />
-            </button>
-          </div>
+          <button
+            className="mt-4 w-full bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-pink-600 transition"
+            onClick={() =>
+              (window.location.href =
+                "mailto:muhamaddrian05@gmail.com?subject=Contact Us&body=Hello")
+            }
+          >
+            Send message
+          </button>
         </form>
       </div>
     </section>

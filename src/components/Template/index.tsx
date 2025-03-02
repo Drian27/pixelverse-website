@@ -5,7 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperInstance } from "swiper/types";
 import "swiper/css";
 import "swiper/css/free-mode";
-import "swiper/css/pagination";
 import { FreeMode } from "swiper/modules";
 import Image from "next/image";
 
@@ -20,11 +19,11 @@ export default function TestimonySlider() {
     "/template-3.png",
     "/template-4.png",
     "/template-5.png",
-    "/template-1.png",
-    "/template-2.png",
-    "/template-3.png",
-    "/template-4.png",
-    "/template-5.png",
+    "/template-6.png",
+    "/template-7.png",
+    "/template-8.png",
+    "/template-9.png",
+    "/template-10.png",
   ];
 
   const totalPages = Math.ceil(images.length / 5);
@@ -38,7 +37,19 @@ export default function TestimonySlider() {
 
   return (
     <div className="bg-black py-16 text-white flex flex-col items-center">
-      <h2 className="text-4xl font-bold mb-6 text-[#ED1F8B]">Available Templates</h2>
+      <Image
+        src="/group.png"
+        alt="Compro Pixel Verse"
+        width={1920}
+        height={1080}
+        quality={100}
+        className="w-full h-auto object-cover"
+        style={{ marginTop: "50px" }}
+      />
+
+      <h2 className="text-4xl font-bold mb-6 text-[#ED1F8B] mt-[122px]">
+        Available Templates
+      </h2>
 
       <div className="w-full max-w-5xl">
         <Swiper
@@ -63,7 +74,7 @@ export default function TestimonySlider() {
             <SwiperSlide key={index}>
               <div className="relative flex justify-center">
                 <div
-                  className="border border-white p-2 bg-white rounded-lg shadow-lg cursor-pointer"
+                  className="border border-white p-2 bg-white rounded-lg shadow-lg cursor-pointer transition-transform hover:scale-105"
                   onClick={() => setPopupImage(img)}
                 >
                   <Image
@@ -112,7 +123,9 @@ export default function TestimonySlider() {
 
         <li>
           <button
-            onClick={() => goToSlide(Math.min(currentPage + 1, totalPages - 1))}
+            onClick={() =>
+              goToSlide(Math.min(currentPage + 1, totalPages - 1))
+            }
             disabled={currentPage === totalPages - 1}
             className={`flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition ${
               currentPage === totalPages - 1
@@ -125,7 +138,6 @@ export default function TestimonySlider() {
         </li>
       </ul>
 
-      {/* Popup Image */}
       {popupImage && (
         <div
           className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"

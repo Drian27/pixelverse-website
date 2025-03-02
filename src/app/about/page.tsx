@@ -1,14 +1,14 @@
 import About from '@/components/About'
 import React from 'react'
-import Partner from '@/components/Partner';
-import History from '@/components/History';
+// import History from '@/components/History';
+import Chooso from '@/components/Choose';
 
 export default function page() {
   return (
     <div>
       <About />
-      <History />
-      <Partner />
+      <Chooso />
+      {/* <History /> */}
     </div>
   )
 }

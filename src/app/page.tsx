@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 import "../styles/index.css";
-import Body from "../components/Hero/index"
+import Body from "../components/Hero/index";
 import TestimonySlider from "../components/Template";
 import Opsi from '@/components/Common/Opsi';
 import Payment from '@/components/Common/Payment';
 import Partner from '@/components/Partner';
-import BgPixelVerse from '@/components/Common/bgPixelVerse';
+import BgPixelVerse from "@/components/Common/BgPixelVerse";
 
 export default function page() {
   return (
@@ -17,5 +17,5 @@ export default function page() {
         <BgPixelVerse />
         <TestimonySlider />
     </div>
-  )
+  );
 }
